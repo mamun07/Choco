@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Banner from "../container/Banner";
 
 export default function Home() {
   return (
@@ -9,10 +10,48 @@ export default function Home() {
           family.
         </title>
       </Head>
-      <main className="container">
-        <h2>Banner</h2>
+      <main className="container-fluid">
+        <div className="container">
+          <Banner />
+        </div>
+
         <h2>Products</h2>
         <h2>Add Banner</h2>
+        <h2>Banner</h2>
+        <h2>Banner</h2>
+        <h2>Banner</h2>
+        <h2>Banner</h2>
+        <h2>Banner</h2>
+        <h2>Banner</h2>
+        <h2>Banner</h2>
+        <h2>Banner</h2>
+        <h2>Banner</h2>
+        <h2>Banner</h2>
+        <h2>Banner</h2>
+        <h2>Banner</h2>
+        <h2>Banner</h2>
+        <h2>Banner</h2>
+        <h2>Banner</h2>
+        <h2>Banner</h2>
+        <h2>Banner</h2>
+        <h2>Banner</h2>
+        <h2>Banner</h2>
+        <h2>Banner</h2>
+        <h2>Banner</h2>
+        <h2>Banner</h2>
+        <h2>Banner</h2>
+        <h2>Banner</h2>
+        <h2>Banner</h2>
+        <h2>Banner</h2>
+        <h2>Banner</h2>
+        <h2>Banner</h2>
+        <h2>Banner</h2>
+        <h2>Banner</h2>
+        <h2>Banner</h2>
+        <h2>Banner</h2>
+        <h2>Banner</h2>
+        <h2>Banner</h2>
+        <h2>Banner</h2>
         <h2>Banner</h2>
         <h2>Banner</h2>
         <h2>Banner</h2>

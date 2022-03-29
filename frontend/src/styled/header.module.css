@@ -1,7 +1,11 @@
 .headerbg {
+  position: sticky;
+  top: 0;
   padding: 10px 0;
   color: var(--secondary);
   border-bottom: 1px solid var(--gray);
+  background: var(--white);
+  z-index: 9;
 }
 .headerMain {
   display: flex;
@@ -24,6 +28,7 @@
 .headerCategory {
   margin: 0;
   padding: 0;
+  z-index: 99999;
 }
 .headerCategory i {
   font-size: 30px;
@@ -90,22 +95,54 @@
 }
 .categoryButton ul {
   position: absolute;
-  left: 0;
+  left: -30px;
   top: 100%;
   margin: 0;
-  padding: 0;
-  min-width: 200px;
-  background: var(--secondary-light);
+  padding: 10px 0;
+  min-width: 300px;
+  background: var(--white);
+  border-radius: 5px;
+  box-shadow: 0px 0px 20px 0px var(--gray2);
+  z-index: 1;
 }
 .categoryButton ul li a {
   font-size: var(--fz2);
-  line-height: var(--fz10);
   color: var(--secondary);
   display: block;
-  margin-bottom: 5px;
-  padding: 0 20px;
-  border-bottom: 1px solid var(--primary);
+  padding: 12px 20px;
+  transition: 0.6s;
 }
+.categoryButton ul li a:hover {
+  background: var(--primary-light);
+  color: var(--secondary-light);
+  padding-left: 30px;
+}
+.categoryButton ul li:last-child a {
+  border-bottom: none;
+}
+
 .categoryButton:hover ul {
   display: block;
+}
+
+@media (max-width: 500px) {
+  .headerLogo {
+    margin-right: 10px;
+  }
+  .headerSearchMain {
+    flex: 2;
+  }
+  .headerCarthMain {
+    flex: 0.3;
+  }
+  .headerLogoMain {
+    flex: 0.8;
+    margin-right: 10px;
+  }
+}
+@media (max-width: 375px) {
+  .headerLogoMain {
+    flex: 0.9;
+    margin-right: 5px;
+  }
 }

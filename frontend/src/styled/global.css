@@ -19,11 +19,14 @@
   --OpenSans: "Open Sans", sans-serif;
 
   /* Global Color */
+  --white: #ffffff;
+  --dark: #2d2d2d;
   --primary: #632222;
   --primary-light: #945057;
   --secondary: #2d2d2d;
   --secondary-light: #f7f7f7;
   --gray: #d3d3d3;
+  --gray2: #ebe5e5;
   --orange: rgb(253, 101, 0);
 }
 body {
@@ -63,4 +66,12 @@ button:focus {
   outline: none;
   box-shadow: none;
   border-color: var(--primary-light);
+}
+@media (max-width: 500px) {
+  .container {
+    width: 95%;
+  }
+  .mobileNone {
+    display: none;
+  }
 }
