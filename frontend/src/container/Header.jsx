@@ -33,7 +33,9 @@ const Header = () => {
             <div className={styles.headerCategory}>
               <div className={styles.categoryButton}>
                 <i class="las la-bars"></i>
-                <ul className={styles.categoryMenu}>
+                <ul
+                  className={`${styles.categoryMenu} animate__animated animate__bounceIn`}
+                >
                   <li>
                     <Link href="/">Dark Chocolate</Link>
                   </li>

@@ -1,6 +1,7 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper";
+import styles from "../styled/banner.module.css";
 
 const Banner = () => {
   return (
@@ -20,7 +21,9 @@ const Banner = () => {
       modules={[Autoplay, Pagination]}
       className="chocoSwiper"
     >
-      <SwiperSlide>Slide 1</SwiperSlide>
+      <SwiperSlide>
+        <div className={styles.bannerMain}>Home</div>
+      </SwiperSlide>
     </Swiper>
   );
 };
