@@ -22,7 +22,34 @@ const Banner = () => {
       className="chocoSwiper"
     >
       <SwiperSlide>
-        <div className={styles.bannerMain}>Home</div>
+        <div className={styles.bannerSingle}>
+          <img src="/images/1.jpg" alt="banner image 1" />
+        </div>
+      </SwiperSlide>
+      <SwiperSlide>
+        <div className={styles.bannerSingle}>
+          <img src="/images/2.jpg" alt="banner image 1" />
+        </div>
+      </SwiperSlide>
+      <SwiperSlide>
+        <div className={styles.bannerSingle}>
+          <img src="/images/3.jpg" alt="banner image 1" />
+        </div>
+      </SwiperSlide>
+      <SwiperSlide>
+        <div className={styles.bannerSingle}>
+          <img src="/images/4.jpg" alt="banner image 1" />
+        </div>
+      </SwiperSlide>
+      <SwiperSlide>
+        <div className={styles.bannerSingle}>
+          <img src="/images/5.jpg" alt="banner image 1" />
+        </div>
+      </SwiperSlide>
+      <SwiperSlide>
+        <div className={styles.bannerSingle}>
+          <img src="/images/6.jpg" alt="banner image 1" />
+        </div>
       </SwiperSlide>
     </Swiper>
   );

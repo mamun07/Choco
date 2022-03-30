@@ -11,12 +11,12 @@ const Header = () => {
   }, []);
   function stickNavbar() {
     window.scrollY > 200
-      ? setStickyClass("animate__animated animate__slideInDown")
-      : setStickyClass("");
+      ? setStickyClass("headerbg animate__animated animate__slideInDown")
+      : setStickyClass(`${styles.entryHeader}`);
   }
 
   return (
-    <div className={`${styles.headerbg} ${stickyClass}`}>
+    <div className={`${styles.entryHeader} ${stickyClass}`}>
       <div className="container">
         <div className={styles.headerMain}>
           <div className={styles.headerLogoMain}>
@@ -62,7 +62,11 @@ const Header = () => {
             </div>
           </div>
           <div className={styles.headerSearchMain}>
-            <input type="search" placeholder="search here..." />
+            <input type="text" placeholder="Search here..." />
+            <i
+              onClick={() => alert("Upload your image")}
+              class="las la-camera"
+            ></i>
           </div>
           <div className={styles.headerCarthMain}>
             <ul>

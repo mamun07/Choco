@@ -1,11 +1,11 @@
-.headerbg {
-  position: sticky;
+.entryHeader {
+  position: fixed;
   top: 0;
   padding: 10px 0;
-  color: var(--secondary);
-  border-bottom: 1px solid var(--gray);
-  background: var(--white);
+  color: var(--secondary-light);
+  background: transparent;
   z-index: 9;
+  width: 100%;
 }
 .headerMain {
   display: flex;
@@ -36,13 +36,24 @@
 .headerSearchMain {
   flex: 1.5;
   text-align: center;
+  position: relative;
+}
+.headerSearchMain i {
+  position: absolute;
+  top: 20%;
+  right: -18px;
+  font-size: 30px;
+  cursor: pointer;
+  color: var(--secondary-light);
 }
 .headerSearchMain input {
   width: 100%;
   padding: 15px;
   border-radius: 50px;
-  border: 1px solid var(--gray);
+  border: 1px solid var(--secondary-light);
   transition: 0.3s;
+  background: transparent;
+  color: var(--secondary-light);
 }
 .headerCarthMain {
   flex: 1;
@@ -89,9 +100,11 @@
   text-decoration: none;
 }
 .categoryButton {
-  color: var(--primary);
   cursor: pointer;
   position: relative;
+}
+.categoryButton i {
+  color: var(--secondary-light);
 }
 .categoryButton ul {
   position: absolute;

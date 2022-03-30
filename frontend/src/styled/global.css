@@ -67,6 +67,14 @@ button:focus {
   box-shadow: none;
   border-color: var(--primary-light);
 }
+img {
+  max-width: 100%;
+  height: auto;
+}
+.headerbg {
+  background: var(--white);
+  color: var(--secondary);
+}
 @media (max-width: 500px) {
   .container {
     width: 95%;

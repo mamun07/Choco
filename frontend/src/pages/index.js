@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Banner from "../container/Banner";
+import styles from "../styled/home.module.css";
 
 export default function Home() {
   return (
@@ -10,11 +11,10 @@ export default function Home() {
           family.
         </title>
       </Head>
-      <main className="container-fluid">
-        <div className="container">
+      <main>
+        <div className={styles.entryBanner}>
           <Banner />
         </div>
-
         <h2>Products</h2>
         <h2>Add Banner</h2>
         <h2>Banner</h2>

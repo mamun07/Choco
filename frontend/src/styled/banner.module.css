@@ -1,3 +1,15 @@
-.bannerMain {
-  padding: 50px 0;
+.bannerSingle {
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+.bannerSingle::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  opacity: 0.5;
 }
