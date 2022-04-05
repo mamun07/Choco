@@ -14,6 +14,7 @@
   --fz9: 28px;
   --fz10: 32px;
   --fz11: 36px;
+  --fz12: 60px;
   /* Global Font */
   --Montserrat: "Montserrat", sans-serif;
   --OpenSans: "Open Sans", sans-serif;
@@ -27,8 +28,10 @@
   --secondary-light: #f7f7f7;
   --gray: #d3d3d3;
   --gray2: #ebe5e5;
+  --gray3: #b9b9b9;
   --orange: rgb(253, 101, 0);
 }
+
 body {
   margin: 0;
   padding: 0;
@@ -72,8 +75,10 @@ img {
   height: auto;
 }
 .headerbg {
-  background: var(--white);
-  color: var(--secondary);
+  color: var(--gray3);
+  background: var(--primary);
+  position: sticky;
+  top: 0;
 }
 @media (max-width: 500px) {
   .container {

@@ -1,10 +1,7 @@
 .entryHeader {
-  position: fixed;
-  top: 0;
-  padding: 10px 0;
-  color: var(--secondary-light);
-  background: transparent;
-  z-index: 9;
+  color: var(--gray3);
+  background: var(--primary);
+  z-index: 10;
   width: 100%;
 }
 .headerMain {
@@ -44,16 +41,15 @@
   right: -18px;
   font-size: 30px;
   cursor: pointer;
-  color: var(--secondary-light);
 }
 .headerSearchMain input {
   width: 100%;
   padding: 15px;
   border-radius: 50px;
-  border: 1px solid var(--secondary-light);
+  border: 1px solid var(--gray3);
   transition: 0.3s;
   background: transparent;
-  color: var(--secondary-light);
+  color: var(--gray3);
 }
 .headerCarthMain {
   flex: 1;
@@ -73,7 +69,7 @@
   margin-left: 5px;
 }
 .headerCarthMain ul a i {
-  color: var(--gray);
+  color: var(--gray3);
 }
 .headerCart {
   position: relative;
@@ -102,25 +98,22 @@
 .categoryButton {
   cursor: pointer;
   position: relative;
-}
-.categoryButton i {
-  color: var(--secondary-light);
+  padding: 20px 10px;
 }
 .categoryButton ul {
   position: absolute;
-  left: -30px;
+  left: -50px;
   top: 100%;
   margin: 0;
   padding: 10px 0;
-  min-width: 300px;
-  background: var(--white);
-  border-radius: 5px;
-  box-shadow: 0px 0px 20px 0px var(--gray2);
+  min-width: 225px;
+  background: var(--primary);
+  border-radius: 0 0 5px 5px;
   z-index: 1;
 }
 .categoryButton ul li a {
   font-size: var(--fz2);
-  color: var(--secondary);
+  color: var(--gray);
   display: block;
   padding: 12px 20px;
   transition: 0.6s;

@@ -5,7 +5,6 @@ import styles from "../styled/header.module.css";
 
 const Header = () => {
   const [stickyClass, setStickyClass] = useState("");
-
   useEffect(() => {
     window.addEventListener("scroll", stickNavbar);
   }, []);
@@ -24,8 +23,8 @@ const Header = () => {
               <Link href="/">
                 <Image
                   src="/logo.png"
-                  width="100px"
-                  height="40px"
+                  width="110px"
+                  height="30px"
                   alt="Choco Logo"
                 />
               </Link>
@@ -37,25 +36,39 @@ const Header = () => {
                   className={`${styles.categoryMenu} animate__animated animate__bounceIn`}
                 >
                   <li>
-                    <Link href="/">Dark Chocolate</Link>
+                    <Link href="/">
+                      <a>Dark Chocolate</a>
+                    </Link>
                   </li>
                   <li>
-                    <Link href="/about">Milk Chocolate</Link>
+                    <Link href="/about">
+                      <a>Milk Chocolate</a>
+                    </Link>
                   </li>
                   <li>
-                    <Link href="/contact">White Chocolate</Link>
+                    <Link href="/contact">
+                      <a>White Chocolate</a>
+                    </Link>
                   </li>
                   <li>
-                    <Link href="/contact">Baking Chocolate</Link>
+                    <Link href="/contact">
+                      <a>Baking Chocolate</a>
+                    </Link>
                   </li>
                   <li>
-                    <Link href="/contact">Organic Chocolate</Link>
+                    <Link href="/contact">
+                      <a>Organic Chocolate</a>
+                    </Link>
                   </li>
                   <li>
-                    <Link href="/contact">Compound Chocolate</Link>
+                    <Link href="/contact">
+                      <a>Compound Chocolate</a>
+                    </Link>
                   </li>
                   <li>
-                    <Link href="/contact">Ruby Chocolate</Link>
+                    <Link href="/contact">
+                      <a>Ruby Chocolate</a>
+                    </Link>
                   </li>
                 </ul>
               </div>
@@ -75,15 +88,17 @@ const Header = () => {
               </li>
               <li className="mobileNone">
                 <Link href="/wish">
-                  <i class="lar la-heart"></i>
+                  <a>
+                    <i class="lar la-heart"></i>
+                  </a>
                 </Link>
               </li>
               <li>
                 <Link href="/cart">
-                  <div className={styles.headerCart}>
+                  <a className={styles.headerCart}>
                     <i class="las la-shopping-cart"></i>
                     <span>3</span>
-                  </div>
+                  </a>
                 </Link>
               </li>
             </ul>

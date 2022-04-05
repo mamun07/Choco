@@ -11,10 +11,8 @@ export default function Home() {
           family.
         </title>
       </Head>
-      <main>
-        <div className={styles.entryBanner}>
-          <Banner />
-        </div>
+      <main className={styles.homeMain}>
+        <Banner />
         <h2>Products</h2>
         <h2>Add Banner</h2>
         <h2>Banner</h2>
