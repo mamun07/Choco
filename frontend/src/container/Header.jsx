@@ -76,10 +76,11 @@ const Header = () => {
           </div>
           <div className={styles.headerSearchMain}>
             <input type="text" placeholder="Search here..." />
-            <i
-              onClick={() => alert("Upload your image")}
-              class="las la-camera"
-            ></i>
+            <div className={styles.searchIcon}>
+              <button type="button" onClick={() => alert("Upload your image")}>
+                <i class="las la-camera"></i>
+              </button>
+            </div>
           </div>
           <div className={styles.headerCarthMain}>
             <ul>

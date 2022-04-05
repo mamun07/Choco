@@ -40,3 +40,18 @@
   font-size: var(--fz4);
   line-height: var(--fz9);
 }
+.bannerBtn {
+  margin-top: 35px;
+}
+.bannerBtn ul {
+  margin: 0;
+  padding: 0;
+}
+.bannerBtn ul li {
+  float: left;
+  margin-right: 15px;
+  list-style: none;
+}
+.bannerBtn ul li:last-child {
+  margin-right: 0px;
+}
