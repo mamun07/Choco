@@ -20,8 +20,8 @@
   color: var(--gray);
   position: absolute;
   content: "";
-  top: 25%;
-  left: 10%;
+  top: 20%;
+  left: 7.5%;
   width: 50%;
 }
 .entryContent h5 {
@@ -54,4 +54,33 @@
 }
 .bannerBtn ul li:last-child {
   margin-right: 0px;
+}
+
+@media (max-width: 500px) {
+  .entryContent {
+    top: 10%;
+    left: 0;
+    width: 100%;
+    text-align: center;
+  }
+  .entryContent h5 {
+    font-size: var(--fz2);
+    line-height: var(--fz2);
+    margin-bottom: var(--fz1);
+  }
+  .entryContent h2 {
+    font-size: var(--fz5);
+    line-height: var(--fz8);
+    margin-bottom: var(--fz5);
+  }
+  .entryContent p {
+    display: none;
+  }
+  .bannerBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 0 0 0;
+    padding: 0;
+  }
 }

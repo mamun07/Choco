@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Banner from "../container/Banner";
+import Products from "../container/Products";
 import styles from "../styled/home.module.css";
 
 export default function Home() {
@@ -13,7 +14,7 @@ export default function Home() {
       </Head>
       <main className={styles.homeMain}>
         <Banner />
-        <h2>Products</h2>
+        <Products />
         <h2>Add Banner</h2>
         <h2>Banner</h2>
         <h2>Banner</h2>
