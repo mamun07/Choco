@@ -85,7 +85,7 @@ img {
   padding: 3px 70px 3px 30px;
   line-height: 50px;
   display: inline-block;
-  border-radius: 3px;
+  border-radius: 50px;
   font-size: var(--fz2);
   transition: 0.3s;
   color: var(--gray);

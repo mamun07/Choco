@@ -1,10 +1,13 @@
 import React from "react";
+import SectionTitle from "../components/SectionTitle";
+import styles from "../styled/productsection.module.css";
+import ProductSlider from "../components/ProductSlider";
 
 const Products = () => {
   return (
-    <div>
-      <h2>Products Title</h2>
-      <p>Product Thumb</p>
+    <div className={styles.productSection}>
+      <SectionTitle title="new arrivals" seemore="See More" link="/" />
+      <ProductSlider />
     </div>
   );
 };

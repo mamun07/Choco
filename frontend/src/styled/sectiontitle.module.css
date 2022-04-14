@@ -1,0 +1,19 @@
+.section_title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.show_more {
+  padding: 5px 10px;
+  border: 1px solid var(--primary-light);
+  border-radius: 50px;
+  font-size: var(--fz1);
+  transition: 0.3s;
+}
+.show_more:hover {
+  background: var(--primary-light);
+  color: var(--white);
+}
+.show_more i {
+  margin: 0 0 0 10px;
+}

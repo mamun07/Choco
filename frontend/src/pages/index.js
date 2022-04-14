@@ -14,47 +14,51 @@ export default function Home() {
       </Head>
       <main className={styles.homeMain}>
         <Banner />
-        <Products />
-        <h2>Add Banner</h2>
-        <h2>Banner</h2>
-        <h2>Banner</h2>
-        <h2>Banner</h2>
-        <h2>Banner</h2>
-        <h2>Banner</h2>
-        <h2>Banner</h2>
-        <h2>Banner</h2>
-        <h2>Banner</h2>
-        <h2>Banner</h2>
-        <h2>Banner</h2>
-        <h2>Banner</h2>
-        <h2>Banner</h2>
-        <h2>Banner</h2>
-        <h2>Banner</h2>
-        <h2>Banner</h2>
-        <h2>Banner</h2>
-        <h2>Banner</h2>
-        <h2>Banner</h2>
-        <h2>Banner</h2>
-        <h2>Banner</h2>
-        <h2>Banner</h2>
-        <h2>Banner</h2>
-        <h2>Banner</h2>
-        <h2>Banner</h2>
-        <h2>Banner</h2>
-        <h2>Banner</h2>
-        <h2>Banner</h2>
-        <h2>Banner</h2>
-        <h2>Banner</h2>
-        <h2>Banner</h2>
-        <h2>Banner</h2>
-        <h2>Banner</h2>
-        <h2>Banner</h2>
-        <h2>Banner</h2>
-        <h2>Banner</h2>
-        <h2>Banner</h2>
-        <h2>Banner</h2>
-        <h2>Banner</h2>
-        <h2>Policy</h2>
+        <div className="container">
+          <Products />
+        </div>
+        <div className="container">
+          <h2>Add Banner</h2>
+          <h2>Banner</h2>
+          <h2>Banner</h2>
+          <h2>Banner</h2>
+          <h2>Banner</h2>
+          <h2>Banner</h2>
+          <h2>Banner</h2>
+          <h2>Banner</h2>
+          <h2>Banner</h2>
+          <h2>Banner</h2>
+          <h2>Banner</h2>
+          <h2>Banner</h2>
+          <h2>Banner</h2>
+          <h2>Banner</h2>
+          <h2>Banner</h2>
+          <h2>Banner</h2>
+          <h2>Banner</h2>
+          <h2>Banner</h2>
+          <h2>Banner</h2>
+          <h2>Banner</h2>
+          <h2>Banner</h2>
+          <h2>Banner</h2>
+          <h2>Banner</h2>
+          <h2>Banner</h2>
+          <h2>Banner</h2>
+          <h2>Banner</h2>
+          <h2>Banner</h2>
+          <h2>Banner</h2>
+          <h2>Banner</h2>
+          <h2>Banner</h2>
+          <h2>Banner</h2>
+          <h2>Banner</h2>
+          <h2>Banner</h2>
+          <h2>Banner</h2>
+          <h2>Banner</h2>
+          <h2>Banner</h2>
+          <h2>Banner</h2>
+          <h2>Banner</h2>
+          <h2>Banner</h2>
+          <h2>Policy</h2>
+        </div>
       </main>
     </>
   );
