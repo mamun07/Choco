@@ -18,10 +18,12 @@ app.use(cors());
 app.use(express.json());
 app.use(express());
 
-// Server port
+// Server port.....
 const PORT = 5000;
 app.listen(PORT, () => console.log(`Server Running at ${PORT}`));
 
+// Page Routing.....
+app.use("/", PostRouters);
 app.use("/posts", PostRouters);
 
 // mongoose connect
