@@ -9,19 +9,10 @@ const ProductSlider = () => {
     <Swiper
       loop={true}
       centeredSlides={false}
-      autoplay={
-        (true,
-        {
-          delay: 2500,
-          disableOnInteraction: false,
-        })
-      }
-      pagination={
-        (false,
-        {
-          clickable: true,
-        })
-      }
+      autoplay={false}
+      pagination={{
+        clickable: true,
+      }}
       breakpoints={{
         320: {
           slidesPerView: 1.3,
@@ -46,7 +37,7 @@ const ProductSlider = () => {
       }}
       navigation={true}
       modules={[Navigation, Autoplay]}
-      className="productsgrid"
+      className={styles.productsgrid}
     >
       <SwiperSlide>
         <div className={styles.productGrid}>
@@ -63,11 +54,11 @@ const ProductSlider = () => {
             </div>
             <div className={styles.prices}>
               <h4>
-                <i class="las la-dollar-sign"></i>
+                <i className="las la-dollar-sign"></i>
                 400
               </h4>
               <span>
-                <i class="las la-dollar-sign"></i>
+                <i className="las la-dollar-sign"></i>
                 600
               </span>
             </div>
@@ -89,11 +80,11 @@ const ProductSlider = () => {
             </div>
             <div className={styles.prices}>
               <h4>
-                <i class="las la-dollar-sign"></i>
+                <i className="las la-dollar-sign"></i>
                 400
               </h4>
               <span>
-                <i class="las la-dollar-sign"></i>
+                <i className="las la-dollar-sign"></i>
                 600
               </span>
             </div>
@@ -115,11 +106,11 @@ const ProductSlider = () => {
             </div>
             <div className={styles.prices}>
               <h4>
-                <i class="las la-dollar-sign"></i>
+                <i className="las la-dollar-sign"></i>
                 400
               </h4>
               <span>
-                <i class="las la-dollar-sign"></i>
+                <i className="las la-dollar-sign"></i>
                 600
               </span>
             </div>
@@ -141,11 +132,11 @@ const ProductSlider = () => {
             </div>
             <div className={styles.prices}>
               <h4>
-                <i class="las la-dollar-sign"></i>
+                <i className="las la-dollar-sign"></i>
                 400
               </h4>
               <span>
-                <i class="las la-dollar-sign"></i>
+                <i className="las la-dollar-sign"></i>
                 600
               </span>
             </div>

@@ -8,7 +8,7 @@ const SectionTitle = (props) => {
       <Link href={props.link}>
         <a className={styles.show_more}>
           {props.seemore}
-          <i class="las la-arrow-right"></i>
+          <i className="las la-arrow-right"></i>
         </a>
       </Link>
     </div>

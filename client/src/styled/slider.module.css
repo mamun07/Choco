@@ -1,8 +1,19 @@
-.gridThumb {
+.productsgrid {
+  padding: 0 1px;
+}
+.productGrid {
   border: 1px solid var(--gray2);
   border-radius: 5px;
   overflow: hidden;
 }
+.gridContent {
+  padding: var(--fz2);
+}
+.title h2 {
+  font-size: var(--fz2);
+  line-height: var(--fz5);
+}
+
 .prices {
   display: flex;
   justify-content: flex-start;

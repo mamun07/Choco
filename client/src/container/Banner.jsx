@@ -39,14 +39,15 @@ const Banner = () => {
                 <li>
                   <Link href="/wish">
                     <a className="btn">
-                      Custom Order <i class="las la-long-arrow-alt-right"></i>
+                      Custom Order{" "}
+                      <i className="las la-long-arrow-alt-right"></i>
                     </a>
                   </Link>
                 </li>
                 <li>
                   <Link href="/wish">
                     <a className="btn outline">
-                      Order Now <i class="las la-long-arrow-alt-right"></i>
+                      Order Now <i className="las la-long-arrow-alt-right"></i>
                     </a>
                   </Link>
                 </li>

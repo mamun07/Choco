@@ -21,17 +21,19 @@ const Header = () => {
           <div className={styles.headerLogoMain}>
             <div className={styles.headerLogo}>
               <Link href="/">
-                <Image
-                  src="/logo.png"
-                  width="110px"
-                  height="30px"
-                  alt="Choco Logo"
-                />
+                <a>
+                  <Image
+                    src="/logo.png"
+                    width="110px"
+                    height="30px"
+                    alt="Choco Logo"
+                  />
+                </a>
               </Link>
             </div>
             <div className={styles.headerCategory}>
               <div className={styles.categoryButton}>
-                <i class="las la-bars"></i>
+                <i className="las la-bars"></i>
                 <ul
                   className={`${styles.categoryMenu} animate__animated animate__bounceIn`}
                 >
@@ -78,26 +80,26 @@ const Header = () => {
             <input type="text" placeholder="Search here..." />
             <div className={styles.searchIcon}>
               <button type="button" onClick={() => alert("Upload your image")}>
-                <i class="las la-camera"></i>
+                <i className="las la-camera"></i>
               </button>
             </div>
           </div>
           <div className={styles.headerCarthMain}>
             <ul>
               <li className="mobileNone" onClick={() => alert("Login Page")}>
-                <i class="lar la-user"></i>
+                <i className="lar la-user"></i>
               </li>
               <li className="mobileNone">
                 <Link href="/wish">
                   <a>
-                    <i class="lar la-heart"></i>
+                    <i className="lar la-heart"></i>
                   </a>
                 </Link>
               </li>
               <li>
                 <Link href="/cart">
                   <a className={styles.headerCart}>
-                    <i class="las la-shopping-cart"></i>
+                    <i className="las la-shopping-cart"></i>
                     <span>3</span>
                   </a>
                 </Link>

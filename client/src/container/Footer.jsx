@@ -11,27 +11,27 @@ const Footer = () => {
           <ul>
             <li>
               <Link href="/">
-                <i class="lab la-facebook-f"></i>
+                <i className="lab la-facebook-f"></i>
               </Link>
             </li>
             <li>
               <Link href="/">
-                <i class="lab la-instagram"></i>
+                <i className="lab la-instagram"></i>
               </Link>
             </li>
             <li>
               <Link href="/">
-                <i class="lab la-linkedin-in"></i>
+                <i className="lab la-linkedin-in"></i>
               </Link>
             </li>
             <li>
               <Link href="/">
-                <i class="lab la-google-plus"></i>
+                <i className="lab la-google-plus"></i>
               </Link>
             </li>
             <li>
               <Link href="/">
-                <i class="lab la-youtube"></i>
+                <i className="lab la-youtube"></i>
               </Link>
             </li>
           </ul>
