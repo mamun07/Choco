@@ -22,18 +22,11 @@ export const userRegister = async (req, res) => {
     });
 
     // Save user information in mongodb
-    await newUser.save();
 
     // Creating JSON Webtocken to authentication
-    const accesstoken = createAccessToken({ id: newUser._id });
 
-    res.json({ accesstoken });
     res.json({ msg: "Register Success!" });
   } catch (error) {
     return res.status(500).json({ msg: error.message });
   }
-};
-
-const createAccessToken = (user) => {
-  return jwt.sign(user, process.env.ACCESS_TOKEN_SECRT, { expiresIn: "1d" });
 };
