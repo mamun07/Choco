@@ -44,8 +44,21 @@ export const register = async (req, res) => {
   }
 };
 // User login section.....
-export const login = (req, res) => {
-  res.json({ msg: "Welcome to login page" });
+export const login = async (req, res) => {
+  try {
+    const { email, password } = req.body;
+    const user = await Users.findOne({ email });
+    if (!user) return res.json({ msg: "User dose not exist." });
+
+    const isMatch = await bcrypt.compare(password, user.password);
+
+    if (!isMatch) return res.json({ msg: "Incorrect Password." });
+
+    // if login success, create access token & refresh token
+    res.json({ msg: "Login Success!" });
+  } catch (err) {
+    return res.status(500).json({ msg: err.message });
+  }
 };
 
 // User refresh token section.....
@@ -63,7 +76,6 @@ export const refreshToken = (req, res) => {
     return res.status(500).json({ msg: err.message });
   }
 };
-
 // Create access token.....
 const createAccessToken = (user) => {
   return jwt.sign(user, process.env.ACCESS_TOKEN_SECRT, { expiresIn: "1d" });
