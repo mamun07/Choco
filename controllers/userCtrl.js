@@ -3,7 +3,7 @@ import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
 
 // User Register section.....
-export const userRegister = async (req, res) => {
+export const register = async (req, res) => {
   try {
     const { name, phone, email, password } = req.body;
     const user = await Users.findOne({ email });
@@ -30,8 +30,8 @@ export const userRegister = async (req, res) => {
     await newUser.save();
 
     // The jsonwebtoken to authentication
-    const accesstoken = CreateAccessToken({ id: newUser._id });
-    const refreshtoken = CreateRefreshAccessToken({ id: newUser._id });
+    const accesstoken = createAccessToken({ id: newUser._id });
+    const refreshtoken = createRefreshAccessToken({ id: newUser._id });
 
     res.cookie("refreshtoken", refreshtoken, {
       httpOnly: true,
@@ -39,13 +39,16 @@ export const userRegister = async (req, res) => {
     });
 
     res.json({ msg: accesstoken });
-    // res.json({msg: "Registration Successfull!"});
   } catch (err) {
     return res.status(500).json({ msg: err.message });
   }
 };
-
 // User login section.....
+export const login = (req, res) => {
+  res.json({ msg: "Welcome to login page" });
+};
+
+// User refresh token section.....
 export const refreshToken = (req, res) => {
   try {
     const rf_token = req.cookies.refreshtoken;
@@ -53,21 +56,20 @@ export const refreshToken = (req, res) => {
       return res.status(400).json({ msg: "Please Login or Register" });
     jwt.verify(rf_token, process.env.REFRSH_ACCESS_TOKEN_SECRT, (err, user) => {
       if (err) return res.status(400).json({ msg: "Please Login or Register" });
-      const accesstoken = CreateAccessToken({ id: user.id });
+      const accesstoken = createAccessToken({ id: user.id });
       res.json({ user, accesstoken });
     });
-    res.json({ rf_token });
   } catch (err) {
     return res.status(500).json({ msg: err.message });
   }
 };
 
 // Create access token.....
-const CreateAccessToken = (user) => {
+const createAccessToken = (user) => {
   return jwt.sign(user, process.env.ACCESS_TOKEN_SECRT, { expiresIn: "1d" });
 };
 // Create refresh access token.....
-const CreateRefreshAccessToken = (user) => {
+const createRefreshAccessToken = (user) => {
   return jwt.sign(user, process.env.REFRSH_ACCESS_TOKEN_SECRT, {
     expiresIn: "7d",
   });
