@@ -77,6 +77,15 @@ export const logout = async (req, res) => {
     return res.status(500).json({ msg: err.message });
   }
 };
+export const getUser = async (req, res) => {
+  try {
+    const user = await Users.findById(req.user.id).select("password");
+    if (!user) return res.status(400).json({ msg: "User dose not exist." });
+    res.json(user);
+  } catch (err) {
+    return res.status(500).json({ msg: err.message });
+  }
+};
 
 // User refresh token section.....
 export const refreshToken = (req, res) => {
