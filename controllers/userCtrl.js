@@ -47,15 +47,32 @@ export const register = async (req, res) => {
 export const login = async (req, res) => {
   try {
     const { email, password } = req.body;
+
     const user = await Users.findOne({ email });
     if (!user) return res.json({ msg: "User dose not exist." });
 
     const isMatch = await bcrypt.compare(password, user.password);
-
     if (!isMatch) return res.json({ msg: "Incorrect Password." });
 
     // if login success, create access token & refresh token
-    res.json({ msg: "Login Success!" });
+    const accesstoken = createAccessToken({ id: user._id });
+    const refreshtoken = createRefreshAccessToken({ id: user._id });
+
+    res.cookie("refreshtoken", refreshtoken, {
+      httpOnly: true,
+      path: "/user/refresh_token",
+    });
+
+    res.json({ msg: accesstoken });
+  } catch (err) {
+    return res.status(500).json({ msg: err.message });
+  }
+};
+// User logout section.....
+export const logout = async (req, res) => {
+  try {
+    res.clearCookie("refreshtoken", { path: "/user/refresh_token" });
+    return res.json({ msg: "logged Out" });
   } catch (err) {
     return res.status(500).json({ msg: err.message });
   }
