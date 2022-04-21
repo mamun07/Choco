@@ -5,7 +5,8 @@ import cors from "cors";
 import fileUpload from "express-fileupload";
 import cookieParser from "cookie-parser";
 
-import Routers from "./routes/userRouter.js";
+import userRouters from "./routes/userRouter.js";
+import categoryRouter from "./routes/categoryRouter.js";
 
 const app = express();
 app.use(express.json());
@@ -22,7 +23,8 @@ const PORT = process.env.ACCESS_PORT;
 app.listen(PORT, () => console.log(`Server Running at ${PORT}`));
 
 // Page Routing.....
-app.use("/user", Routers);
+app.use("/user", userRouters);
+app.use("/api", categoryRouter);
 
 // Conecting Mongoose.....
 try {
