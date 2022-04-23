@@ -79,7 +79,7 @@ export const logout = async (req, res) => {
 };
 export const getUser = async (req, res) => {
   try {
-    const user = await Users.findById(req.user.id).select("password");
+    const user = await Users.findById(req.user.id).select("-password");
     if (!user) return res.status(400).json({ msg: "User dose not exist." });
     res.json(user);
   } catch (err) {

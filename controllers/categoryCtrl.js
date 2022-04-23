@@ -11,7 +11,7 @@ export const getCategories = async (req, res) => {
 
 export const creatCategory = async (req, res) => {
   try {
-    res.json("Check admin success");
+    res.json("Check admin working successfully !");
   } catch (err) {
     return res.status(500).json({ msg: err.message });
   }
