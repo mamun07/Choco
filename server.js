@@ -8,6 +8,7 @@ import cookieParser from "cookie-parser";
 import userRouters from "./routes/userRouter.js";
 import categoryRouter from "./routes/categoryRouter.js";
 import uploadRouter from "./routes/uploadRouter.js";
+import productRouter from "./routes/productRouter.js";
 
 const app = express();
 app.use(express.json());
@@ -27,6 +28,7 @@ app.listen(PORT, () => console.log(`Server Running at ${PORT}`));
 app.use("/user", userRouters);
 app.use("/api", categoryRouter);
 app.use("/api", uploadRouter);
+app.use("/api", productRouter);
 
 // Conecting Mongoose.....
 try {
