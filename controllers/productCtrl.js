@@ -37,14 +37,31 @@ export const createProduct = async (req, res) => {
 };
 export const deleteProduct = async (req, res) => {
   try {
-    res.json({ msg: "Delete Products" });
+    await Products.findByIdAndDelete(req.params.id);
+    res.json({ msg: "Delete a product successfully!" });
   } catch (err) {
     return res.status(500).json({ msg: err.message });
   }
 };
 export const updateProduct = async (req, res) => {
   try {
-    res.json({ msg: "Update Products" });
+    const { title, price, description, content, images, category } = req.body;
+
+    if (!images) return res.status(400).json({ msg: "No image upload." });
+
+    await Products.findByIdAndUpdate(
+      { _id: req.params.id },
+      {
+        title: title.toLowerCase(),
+        price,
+        description,
+        content: Products,
+        images,
+        category,
+      }
+    );
+
+    res.json({ msg: "Update a product successfully!" });
   } catch (err) {
     return res.status(500).json({ msg: err.message });
   }

@@ -22,7 +22,7 @@ export const creatCategory = async (req, res) => {
 
     await newCategory.save();
 
-    res.json("Check admin working successfully !");
+    res.json({ msg: "Category create & admin checked successfully!" });
   } catch (err) {
     return res.status(500).json({ msg: err.message });
   }
