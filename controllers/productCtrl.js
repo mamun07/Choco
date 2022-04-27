@@ -1,8 +1,60 @@
 import Products from "../models/productModel.js";
 
+// filter, shorting and paginating...
+
+class APIfeatures {
+  constructor(query, queryString) {
+    this.query = query;
+    this.queryString = queryString;
+  }
+  filtering() {
+    const queryObj = { ...this.queryString };
+
+    // console.log({ before: queryObj });
+
+    const excludeFields = ["page", "short", "limit"];
+    excludeFields.forEach((el) => delete queryObj[el]);
+
+    // console.log({ after: queryObj });
+
+    let queryStr = JSON.stringify(queryObj);
+    queryStr = queryStr.replace(
+      /\b(gte|gt|lt|lte|regex)\b/g,
+      (match) => "$" + match
+    );
+
+    // console.log({ queryStr });
+
+    // gte = greater than or equal
+    // lt = Lesser than or equal
+    // lt = lesser than
+    // gt = greater than
+    this.query.find(JSON.parse(queryStr));
+
+    return this;
+  }
+
+  sorting() {
+    // if (this.queryString.sort) {
+    //   const sortBy = this.queryString.sort.split(",").join(" ");
+    //   this.query = this.query.sort(sortBy);
+    // } else {
+    //   this.query = this.query.sort("-createAt");
+    // }
+    return this;
+  }
+
+  paginating() {
+    return this;
+  }
+}
+
 export const getProducts = async (req, res) => {
   try {
-    const products = await Products.find();
+    const features = new APIfeatures(Products.find(), req.query).filtering();
+
+    const products = await features.query;
+
     res.json(products);
   } catch (err) {
     return res.status(500).json({ msg: err.message });
