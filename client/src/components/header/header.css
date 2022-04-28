@@ -1,0 +1,6 @@
+.header_right li {
+  float: right;
+}
+.header_right li i {
+  font-size: 30px;
+}
