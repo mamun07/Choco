@@ -1,6 +1,45 @@
-.header_right li {
-  float: right;
+.header-main_logo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
-.header_right li i {
-  font-size: 30px;
+.header-main_logo a img {
+  margin: 0;
+  padding: 0;
+}
+.header-main_center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header-main_right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.header-main_right ul li a {
+  display: block;
+}
+.header-main_right ul li {
+  float: right;
+  margin-left: 10px;
+}
+.header-main_right ul li i {
+  font-size: 25px;
+}
+.cart_icons {
+  position: relative;
+}
+.cart_icons span {
+  position: absolute;
+  font-size: 12px;
+  top: -7px;
+  right: -7px;
+  background: var(--color-o);
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  border-radius: 100%;
+  color: var(--color-s);
+  text-align: center;
 }
