@@ -1,10 +1,4 @@
-import {
-  Card,
-  CardActions,
-  CardContent,
-  CardMedia,
-  Typography,
-} from '@mui/material';
+import { Card, CardContent, CardMedia, Typography } from '@mui/material';
 import React from 'react';
 
 const ProductItem = ({ product }) => {
@@ -16,13 +10,9 @@ const ProductItem = ({ product }) => {
         alt={product.title}
       />
       <CardContent>
-        <Typography gutterBottom variant="h5" component="div">
-          {product.title}
-        </Typography>
-      </CardContent>
-      <CardActions>
+        <Typography variant="h6">{product.title}</Typography>
         <Typography variant="h5">{product.price}</Typography>
-      </CardActions>
+      </CardContent>
     </Card>
   );
 };
