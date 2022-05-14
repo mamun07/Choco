@@ -1,18 +1,16 @@
-import React, { useState, useContext } from "react";
-import { Link } from "react-router-dom";
-import { GlobalState } from "../../GlobalState";
-import { Container, Box, TextField, Grid } from "@mui/material";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { Container, Box, TextField, Grid } from '@mui/material';
 
 const Header = () => {
-  const value = useContext(GlobalState);
   return (
-    <Box sx={{ py: 2, borderBottom: "1px solid #f0f0f0" }}>
+    <Box sx={{ py: 2, borderBottom: '1px solid #f0f0f0' }}>
       <Container maxWidth="xl">
         <Grid container spacing={2}>
           <Grid
-            display={"flex"}
-            alignItems={"center"}
-            justifyContent={"flex-start"}
+            display={'flex'}
+            alignItems={'center'}
+            justifyContent={'flex-start'}
             item
             xl={3}
             xs={3}
