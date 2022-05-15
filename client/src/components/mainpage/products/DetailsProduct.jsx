@@ -12,17 +12,23 @@ const DetailsProduct = () => {
   const [detailsProduct, setDetailsProduct] = useState([]);
 
   useEffect(() => {
-    if (params)
+    if (params.id)
       products.forEach((product) => {
         if (product._id === params.id) setDetailsProduct(product);
       });
-  }, [params, products]);
+  }, [params.id, products]);
   if (detailsProduct.length === 0) return null;
   return (
     <Container maxWidth="xl">
       <Grid container spacing={3} my={3}>
         <Grid item xs={12} md={5}>
-          <Box className="product-thumb">
+          <Box
+            className="product-thumb"
+            border="1px solid"
+            borderColor="primary.light"
+            borderRadius="5px"
+            overflow="hidden"
+          >
             <img src={detailsProduct.images.url} alt={detailsProduct.title} />
           </Box>
         </Grid>
@@ -36,7 +42,14 @@ const DetailsProduct = () => {
           <Box mt={5}>
             <Link to="/cart">
               <Button
-                sx={{ p: '10px 30px', fontSize: '15px' }}
+                sx={{
+                  p: '10px 30px',
+                  fontSize: '15px',
+                  bgcolor: 'secondary.dark',
+                  ':hover': {
+                    bgcolor: 'secondary.light',
+                  },
+                }}
                 variant="contained"
               >
                 BUY IT NOW
@@ -52,13 +65,13 @@ const DetailsProduct = () => {
         </Grid>
         <Grid item xs={12} md={2}>
           <Box>
-            <Typography variant="h6" py={2}>
+            <Typography variant="h5" py={2}>
               Related Products
             </Typography>
             {products.map((product) => {
               return product.category === detailsProduct.category ? (
-                <Box mb={2}>
-                  <ProductItem key={product._id} product={product} />
+                <Box mb={2} key={product._id}>
+                  <ProductItem product={product} />
                 </Box>
               ) : null;
             })}
@@ -68,7 +81,7 @@ const DetailsProduct = () => {
       <Grid container spacing={3} my={3}>
         <Grid item xs={12}>
           <Box>
-            <Typography variant="h5">Product Description</Typography>
+            <Typography variant="h2">Product Description</Typography>
           </Box>
           <Box>
             <Typography variant="p">{detailsProduct.description}</Typography>
