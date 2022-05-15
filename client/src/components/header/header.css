@@ -43,3 +43,6 @@
   color: white;
   text-align: center;
 }
+.login-popup {
+  cursor: pointer;
+}
