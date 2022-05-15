@@ -12,13 +12,13 @@ const ProductItem = ({ product }) => {
         alt={product.title}
       />
       <CardContent>
-        <NavLink to={`detail/${product._id}`}>
+        <NavLink to={`/detail/${product._id}`}>
           <Typography gutterBottom variant="h5" component="div">
             {product.title}
           </Typography>
         </NavLink>
         <Typography variant="h5" color={'orange'}>
-          {product.price} TK
+          ৳ {product.price}
         </Typography>
       </CardContent>
     </Card>

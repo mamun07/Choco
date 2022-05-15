@@ -4,6 +4,8 @@ import { Link, useParams } from 'react-router-dom';
 import { GlobalState } from '../../../GlobalState';
 import ShoppingBasketOutlinedIcon from '@mui/icons-material/ShoppingBasketOutlined';
 
+import ProductItem from '../utils/productItem/ProductItem';
+
 const DetailsProduct = () => {
   const params = useParams();
   const state = useContext(GlobalState);
@@ -29,7 +31,7 @@ const DetailsProduct = () => {
           <Typography variant="h3" mb={2}>
             {detailsProduct.title}
           </Typography>
-          <Typography variant="h4">{detailsProduct.price} TK</Typography>
+          <Typography variant="h4">৳ {detailsProduct.price}</Typography>
           <Box mt={5} sx={{ colo: '#fff' }}>
             <Link to="/cart">
               <Button
@@ -43,10 +45,17 @@ const DetailsProduct = () => {
           </Box>
         </Grid>
         <Grid item xs={12} md={2}>
-          <Box border={'1px solid #ddd'}>
-            <Typography variant="h6" p={2}>
+          <Box>
+            <Typography variant="p" p={2}>
               Related Products
             </Typography>
+            {products.map((product) => {
+              return product.category === detailsProduct.category ? (
+                <Box mb={2}>
+                  <ProductItem key={product._id} product={product} />
+                </Box>
+              ) : null;
+            })}
           </Box>
         </Grid>
       </Grid>
