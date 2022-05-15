@@ -7,7 +7,6 @@ const ProductItem = ({ product }) => {
     <Card>
       <CardMedia
         component="img"
-        height={200}
         image={product.images.url}
         alt={product.title}
       />
@@ -17,7 +16,7 @@ const ProductItem = ({ product }) => {
             {product.title}
           </Typography>
         </NavLink>
-        <Typography variant="h5" color={'orange'}>
+        <Typography variant="h5" color="secondary.dark">
           ৳ {product.price}
         </Typography>
       </CardContent>

@@ -2,30 +2,15 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Roboto', sans-serif;
   color: var(--color-p);
   font-weight: 400;
-
-  --color-p: #222831;
-  --color-pl: #393e46;
-  --color-s: #ffffff;
-  --color-sl: #eeeeee;
-  --color-o: #d65a31;
-  --color-ol: #ff7700;
 }
 li {
   list-style: none;
 }
 a {
   text-decoration: none;
-}
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  color: var(--color-p);
 }
 img {
   max-width: '100%';
