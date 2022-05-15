@@ -2,7 +2,6 @@ import { Box, Button, Container, Grid, Typography } from '@mui/material';
 import React, { useContext, useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { GlobalState } from '../../../GlobalState';
-import ShoppingBasketOutlinedIcon from '@mui/icons-material/ShoppingBasketOutlined';
 
 import ProductItem from '../utils/productItem/ProductItem';
 
@@ -31,17 +30,24 @@ const DetailsProduct = () => {
           <Typography variant="h3" mb={2}>
             {detailsProduct.title}
           </Typography>
+          <Typography variant="h5">Sold : {detailsProduct.sold}</Typography>
+          <Typography variant="h5">SKU : {detailsProduct.content}</Typography>
           <Typography variant="h4">৳ {detailsProduct.price}</Typography>
-          <Box mt={5} sx={{ colo: '#fff' }}>
+          <Box mt={5}>
             <Link to="/cart">
               <Button
-                sx={{ p: '10px 40px', fontSize: '20px' }}
+                sx={{ p: '10px 30px', fontSize: '15px' }}
                 variant="contained"
-                startIcon={<ShoppingBasketOutlinedIcon />}
               >
-                BUY NOW
+                BUY IT NOW
               </Button>
             </Link>
+            <Button
+              sx={{ p: '10px 30px', fontSize: '15px', ml: 2 }}
+              variant="outlined"
+            >
+              Add To Cart
+            </Button>
           </Box>
         </Grid>
         <Grid item xs={12} md={2}>

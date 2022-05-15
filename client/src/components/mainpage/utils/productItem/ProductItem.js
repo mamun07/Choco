@@ -13,7 +13,7 @@ const ProductItem = ({ product }) => {
       />
       <CardContent>
         <NavLink to={`/detail/${product._id}`}>
-          <Typography gutterBottom variant="h5" component="div">
+          <Typography gutterBottom variant="h5" component="h5">
             {product.title}
           </Typography>
         </NavLink>

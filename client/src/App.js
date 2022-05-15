@@ -4,23 +4,25 @@ import Header from './components/header/Header';
 import Footer from './components/footer/Footer';
 import Pages from './components/mainpage/pages';
 import { DataProvider } from './GlobalState';
-import CssBaseline from '@mui/material/CssBaseline';
+import { CssBaseline, ThemeProvider, Box } from '@mui/material';
+import theme from './theme';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-import { Box } from '@mui/material';
 
 const App = () => {
   return (
     <DataProvider>
-      <Router>
-        <Box className="App">
-          <CssBaseline />
-          <Header />
-          <Pages />
-          <Footer />
-        </Box>
-      </Router>
+      <ThemeProvider theme={theme}>
+        <CssBaseline />
+        <Router>
+          <Box className="App">
+            <Header />
+            <Pages />
+            <Footer />
+          </Box>
+        </Router>
+      </ThemeProvider>
     </DataProvider>
   );
 };
