@@ -40,7 +40,7 @@ const Header = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/wish-list">
+                <Link to="/product">
                   <i className="lar la-heart"></i>
                 </Link>
               </li>

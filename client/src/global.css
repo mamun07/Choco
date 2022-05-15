@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   color: var(--color-p);
   font-weight: 400;
 
@@ -26,6 +26,14 @@ h4,
 h5,
 h6 {
   color: var(--color-p);
+}
+img {
+  max-width: '100%';
+  height: auto;
+}
+.product-thumb img {
+  max-width: 100%;
+  height: auto;
 }
 
 /* External css add */
