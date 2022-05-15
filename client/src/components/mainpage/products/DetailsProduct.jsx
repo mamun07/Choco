@@ -46,7 +46,7 @@ const DetailsProduct = () => {
         </Grid>
         <Grid item xs={12} md={2}>
           <Box>
-            <Typography variant="p" p={2}>
+            <Typography variant="h6" py={2}>
               Related Products
             </Typography>
             {products.map((product) => {
