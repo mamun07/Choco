@@ -1,8 +1,8 @@
 import React from 'react';
 import { Box, DialogContent, Tab, Tabs, Typography } from '@mui/material';
 import PropTypes from 'prop-types';
-import Login from './mainpage/auth/Login';
-import Register from './mainpage/auth/Register';
+import Login from '../auth/Login';
+import Register from '../auth/Register';
 
 const LoginPopup = () => {
   const [value, setValue] = React.useState(0);

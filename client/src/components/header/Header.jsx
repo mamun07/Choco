@@ -1,7 +1,7 @@
 import React, { forwardRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Container, Box, TextField, Grid, Slide, Dialog } from '@mui/material';
-import LoginPopup from '../LoginPopup';
+import LoginPopup from '../mainpage/utils/LoginPopup';
 
 const Transition = forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
