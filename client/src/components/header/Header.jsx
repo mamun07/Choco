@@ -1,9 +1,20 @@
-import React from 'react';
+import React, { forwardRef, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Container, Box, TextField, Grid } from '@mui/material';
-import HeaderLeft from '../HeaderLeft';
+import { Container, Box, TextField, Grid, Slide, Dialog } from '@mui/material';
+import LoginPopup from '../LoginPopup';
+
+const Transition = forwardRef(function Transition(props, ref) {
+  return <Slide direction="up" ref={ref} {...props} />;
+});
 
 const Header = () => {
+  const [open, setOpen] = useState(false);
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+  const handleClose = () => {
+    setOpen(false);
+  };
   return (
     <Box sx={{ py: 2, borderBottom: '1px solid #f0f0f0' }}>
       <Container maxWidth="xl">
@@ -26,7 +37,34 @@ const Header = () => {
             </Box>
           </Grid>
           <Grid className="header-main_right" item xl={3} xs={3}>
-            <HeaderLeft />
+            <ul>
+              <li>
+                <Link className="cart_icons" to="/cart">
+                  <Box>
+                    <span>3</span>
+                    <i className="las la-shopping-cart"></i>
+                  </Box>
+                </Link>
+              </li>
+              <li className="login-popup" onClick={handleClickOpen}>
+                <i className="lar la-user"></i>
+              </li>
+              <li>
+                <Link to="/product">
+                  <i className="lar la-heart"></i>
+                </Link>
+              </li>
+            </ul>
+            <>
+              <Dialog
+                open={open}
+                TransitionComponent={Transition}
+                keepMounted
+                onClose={handleClose}
+              >
+                <LoginPopup />
+              </Dialog>
+            </>
           </Grid>
         </Grid>
       </Container>

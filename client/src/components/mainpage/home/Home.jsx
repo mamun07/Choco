@@ -20,6 +20,32 @@ const Home = () => {
         <Swiper
           spaceBetween={15}
           slidesPerView={5}
+          breakpoints={{
+            320: {
+              slidesPerView: 1,
+              spaceBetween: 15,
+            },
+            375: {
+              slidesPerView: 2,
+              spaceBetween: 15,
+            },
+            425: {
+              slidesPerView: 2,
+              spaceBetween: 15,
+            },
+            640: {
+              slidesPerView: 2,
+              spaceBetween: 15,
+            },
+            768: {
+              slidesPerView: 4,
+              spaceBetween: 15,
+            },
+            1024: {
+              slidesPerView: 5,
+              spaceBetween: 15,
+            },
+          }}
           autoplay={{
             delay: 2500,
             disableOnInteraction: false,
