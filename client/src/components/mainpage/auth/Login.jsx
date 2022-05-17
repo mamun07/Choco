@@ -19,9 +19,7 @@ const Login = () => {
     e.preventDefault();
     try {
       await axios.post('/user/login', { ...user });
-
       localStorage.setItem('firstLogin', true);
-
       window.location.href = '/';
     } catch (err) {
       alert(err.response.data.msg);
@@ -29,37 +27,30 @@ const Login = () => {
   };
 
   return (
-    <Box>
-      <form onSubmit={loginSubmit}>
-        <TextField
-          label="Email"
-          name="email"
-          variant="standard"
-          type="email"
-          required
-          value={user.email}
-          onChange={onChangeInput}
-          sx={{ mb: 3, width: '100%' }}
-        />
-        <TextField
-          label="Password"
-          name="password"
-          variant="standard"
-          type="password"
-          required
-          value={user.password}
-          onChange={onChangeInput}
-          sx={{ mb: 5, width: '100%' }}
-        />
-        <Button
-          onClick={notify}
-          type="submit"
-          variant="contained"
-          sx={{ p: '10px 30px' }}
-        >
-          Login
-        </Button>
-      </form>
+    <Box component="form" onSubmit={loginSubmit} noValidate autoComplete="on">
+      <TextField
+        label="Email"
+        name="email"
+        variant="standard"
+        type="email"
+        required
+        value={user.email}
+        onChange={onChangeInput}
+        sx={{ mb: 3, width: '100%' }}
+      />
+      <TextField
+        label="Password"
+        name="password"
+        variant="standard"
+        type="password"
+        required
+        value={user.password}
+        onChange={onChangeInput}
+        sx={{ mb: 5, width: '100%' }}
+      />
+      <Button onClick={notify} type="submit" variant="contained" size="large">
+        Login
+      </Button>
     </Box>
   );
 };

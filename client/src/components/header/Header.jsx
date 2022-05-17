@@ -17,7 +17,7 @@ const Header = () => {
   };
   return (
     <Box sx={{ py: 2, borderBottom: '1px solid #f0f0f0' }}>
-      <Container maxWidth="xl">
+      <Container maxWidth="xxl">
         <Grid container spacing={2}>
           <Grid
             display={'flex'}
