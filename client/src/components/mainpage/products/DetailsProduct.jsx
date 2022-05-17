@@ -61,7 +61,6 @@ const DetailsProduct = () => {
           <Typography variant="h1" mb={2}>
             {detailsProduct.title}
           </Typography>
-          <Typography variant="h5">Sold : {detailsProduct.sold}</Typography>
           <Typography variant="h5">
             SKU : {detailsProduct.product_id}
           </Typography>
