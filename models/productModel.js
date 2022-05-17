@@ -1,4 +1,4 @@
-import mongoose from "mongoose";
+import mongoose from 'mongoose';
 
 const productSchema = new mongoose.Schema(
   {
@@ -14,6 +14,11 @@ const productSchema = new mongoose.Schema(
       required: true,
     },
     price: {
+      type: Number,
+      trim: true,
+      required: true,
+    },
+    quantity: {
       type: Number,
       trim: true,
       required: true,
@@ -48,6 +53,6 @@ const productSchema = new mongoose.Schema(
   }
 );
 
-const Models = mongoose.model("Products", productSchema);
+const Models = mongoose.model('Products', productSchema);
 
 export default Models;

@@ -18,6 +18,7 @@ const DetailsProduct = () => {
       });
   }, [params.id, products]);
   if (detailsProduct.length === 0) return null;
+
   return (
     <Container maxWidth="xl">
       <Grid container spacing={3} my={3}>
@@ -33,12 +34,17 @@ const DetailsProduct = () => {
           </Box>
         </Grid>
         <Grid item xs={12} md={5}>
-          <Typography variant="h3" mb={2}>
+          <Typography variant="h1" mb={2}>
             {detailsProduct.title}
           </Typography>
           <Typography variant="h5">Sold : {detailsProduct.sold}</Typography>
-          <Typography variant="h5">SKU : {detailsProduct.content}</Typography>
-          <Typography variant="h4">৳ {detailsProduct.price}</Typography>
+          <Typography variant="h5">
+            SKU : {detailsProduct.product_id}
+          </Typography>
+          <Typography variant="h4">৳. {detailsProduct.price}</Typography>
+          <Typography variant="h4">
+            Quantity: {detailsProduct.quantity} left only.
+          </Typography>
           <Box mt={5}>
             <Link to="/cart">
               <Button

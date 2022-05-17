@@ -8,6 +8,7 @@ import theme from './theme';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
+import 'swiper/css/thumbs';
 
 // page link
 import Header from './components/header/Header';
