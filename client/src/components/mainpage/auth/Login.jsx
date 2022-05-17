@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import { Button, TextField, Box } from '@mui/material';
 import axios from 'axios';
+import { toast } from 'react-toastify';
 
 const Login = () => {
+  const notify = () => toast.success('Login Success');
   const [user, setUser] = useState({
     email: '',
     password: '',
@@ -49,7 +51,12 @@ const Login = () => {
           onChange={onChangeInput}
           sx={{ mb: 5, width: '100%' }}
         />
-        <Button type="submit" variant="contained" sx={{ p: '10px 30px' }}>
+        <Button
+          onClick={notify}
+          type="submit"
+          variant="contained"
+          sx={{ p: '10px 30px' }}
+        >
           Login
         </Button>
       </form>

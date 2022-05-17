@@ -76,19 +76,24 @@ const DetailsProduct = () => {
                 <Button
                   onClick={onChangeMinus}
                   variant="outlined"
-                  sx={{ height: '50px', textAlign: 'center' }}
+                  sx={{ height: '50px', textAlign: 'center', borderRadius: 0 }}
                 >
                   <i className="las la-minus"></i>
                 </Button>
                 <OutlinedInput
                   disabled
-                  sx={{ width: '100px', height: '50px', textAlign: 'center' }}
+                  sx={{
+                    width: '100px',
+                    height: '50px',
+                    textAlign: 'center',
+                    borderRadius: 0,
+                  }}
                   value={count}
                 />
                 <Button
                   onClick={onChangePlus}
                   variant="outlined"
-                  sx={{ height: '50px', textAlign: 'center' }}
+                  sx={{ height: '50px', textAlign: 'center', borderRadius: 0 }}
                 >
                   <i className="las la-plus"></i>
                 </Button>
