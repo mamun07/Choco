@@ -11,7 +11,7 @@ const HomeProductSlider = () => {
   return (
     <Swiper
       spaceBetween={15}
-      slidesPerView={5}
+      slidesPerView={6}
       breakpoints={{
         320: {
           slidesPerView: 1,
@@ -22,11 +22,11 @@ const HomeProductSlider = () => {
           spaceBetween: 15,
         },
         425: {
-          slidesPerView: 2,
+          slidesPerView: 3,
           spaceBetween: 15,
         },
         640: {
-          slidesPerView: 2,
+          slidesPerView: 3,
           spaceBetween: 15,
         },
         768: {

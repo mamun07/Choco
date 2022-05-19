@@ -11,6 +11,7 @@ import {
   IconButton,
   OutlinedInput,
   CardMedia,
+  Typography,
 } from '@mui/material';
 import LoginPopup from '../mainpage/utils/LoginPopup';
 
@@ -27,7 +28,17 @@ const Header = () => {
     setOpen(false);
   };
   return (
-    <Box sx={{ py: 2, borderBottom: '1px solid #f0f0f0' }}>
+    <Box
+      bgcolor={'secondary.main'}
+      sx={{
+        py: 2,
+        borderBottom: '1px solid #f0f0f0',
+        position: 'sticky',
+        top: '0',
+        zIndex: '99999',
+        boxShadow: '0px 0px 10px -5px #000000',
+      }}
+    >
       <Container maxWidth="xxl">
         <Grid container spacing={2}>
           <Grid
@@ -81,8 +92,10 @@ const Header = () => {
             <ul>
               <li>
                 <Link className="cart_icons" to="/cart">
-                  <Box>
-                    <span>3</span>
+                  <Box component="div">
+                    <Typography variant="span" component="span">
+                      3
+                    </Typography>
                     <i className="las la-shopping-cart"></i>
                   </Box>
                 </Link>

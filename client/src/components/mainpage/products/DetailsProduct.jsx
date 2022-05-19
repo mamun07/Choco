@@ -39,7 +39,7 @@ const DetailsProduct = () => {
   return (
     <Container maxWidth="xxl">
       <Grid container spacing={3} my={3}>
-        <Grid item xs={12} md={5}>
+        <Grid item xs={12} md={4}>
           <Box
             className="product-thumb"
             sx={{
@@ -55,7 +55,7 @@ const DetailsProduct = () => {
             <img src={detailsProduct.images.url} alt={detailsProduct.title} />
           </Box>
         </Grid>
-        <Grid item xs={12} md={5}>
+        <Grid item xs={12} md={6}>
           <Typography variant="h1" mb={2}>
             {detailsProduct.title}
           </Typography>
