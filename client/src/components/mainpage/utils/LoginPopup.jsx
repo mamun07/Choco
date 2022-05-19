@@ -12,8 +12,9 @@ const LoginPopup = () => {
   return (
     <>
       <DialogContent sx={{ p: 0 }}>
-        <Box sx={{ width: 300 }}>
+        <Box sx={{ width: 300 }} component="div">
           <Box
+            component="div"
             sx={{
               borderBottom: 1,
               borderColor: 'divider',
@@ -53,8 +54,10 @@ function TabPanel(props) {
       {...other}
     >
       {value === index && (
-        <Box sx={{ p: 3 }}>
-          <Typography>{children}</Typography>
+        <Box sx={{ p: 3 }} component="div">
+          <Typography variant="div" component="div">
+            {children}
+          </Typography>
         </Box>
       )}
     </div>

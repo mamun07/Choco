@@ -27,7 +27,7 @@ const Login = () => {
   };
 
   return (
-    <Box component="form" onSubmit={loginSubmit}>
+    <Box variant="form" component="form" onSubmit={loginSubmit}>
       <TextField
         label="Email"
         name="email"
