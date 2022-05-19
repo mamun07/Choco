@@ -5,11 +5,13 @@ import { Link as NavLink } from 'react-router-dom';
 const ProductItem = ({ product }) => {
   return (
     <Card>
-      <CardMedia
-        component="img"
-        image={product.images.url}
-        alt={product.title}
-      />
+      <NavLink to={`/detail/${product._id}`}>
+        <CardMedia
+          component="img"
+          image={product.images.url}
+          alt={product.title}
+        />
+      </NavLink>
       <CardContent>
         <NavLink to={`/detail/${product._id}`}>
           <Typography gutterBottom variant="h5" component="h5">

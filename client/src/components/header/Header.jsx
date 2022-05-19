@@ -1,6 +1,17 @@
 import React, { forwardRef, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Container, Box, TextField, Grid, Slide, Dialog } from '@mui/material';
+import {
+  Container,
+  Box,
+  Grid,
+  Slide,
+  Dialog,
+  FormControl,
+  InputAdornment,
+  IconButton,
+  OutlinedInput,
+  CardMedia,
+} from '@mui/material';
 import LoginPopup from '../mainpage/utils/LoginPopup';
 
 const Transition = forwardRef(function Transition(props, ref) {
@@ -20,23 +31,53 @@ const Header = () => {
       <Container maxWidth="xxl">
         <Grid container spacing={2}>
           <Grid
+            item
+            xs={4}
+            sm={2}
+            lg={1.5}
+            xxl={1}
             display={'flex'}
             alignItems={'center'}
-            justifyContent={'flex-start'}
-            item
-            xl={3}
-            xs={3}
+            justifyContent={'center'}
           >
             <Link to="/">
-              <img src="/logo.svg" alt="logo noto" width="140px" />
+              <CardMedia alt="Paella dish" component="img" image="/logo.svg" />
             </Link>
           </Grid>
-          <Grid item xl={6} xs={6}>
-            <Box className="header-main_center">
-              <TextField fullWidth id="fullWidth" />
+          <Grid
+            item
+            xs={2}
+            sm={6}
+            ml={'auto'}
+            display={{ sm: 'block', xs: 'none' }}
+          >
+            <Box className="header-main_center" variant="form" component="form">
+              <FormControl sx={{ width: '100%' }} variant="outlined">
+                <OutlinedInput
+                  sx={{ borderRadius: '50px' }}
+                  placeholder="Search here.."
+                  id="s"
+                  type={'text'}
+                  autoComplete="on"
+                  startAdornment={
+                    <InputAdornment position="start">
+                      <IconButton>
+                        <i className="las la-search"></i>
+                      </IconButton>
+                    </InputAdornment>
+                  }
+                  endAdornment={
+                    <InputAdornment position="end">
+                      <IconButton>
+                        <i className="las la-camera"></i>
+                      </IconButton>
+                    </InputAdornment>
+                  }
+                />
+              </FormControl>
             </Box>
           </Grid>
-          <Grid className="header-main_right" item xl={3} xs={3}>
+          <Grid item xs={8} sm={3} md={3} className="header-main_right">
             <ul>
               <li>
                 <Link className="cart_icons" to="/cart">
@@ -53,6 +94,12 @@ const Header = () => {
                 <Link to="/product">
                   <i className="lar la-heart"></i>
                 </Link>
+              </li>
+              <li
+                className="search-popup-md"
+                onClick={() => alert('Search options working')}
+              >
+                <i className="las la-search"></i>
               </li>
             </ul>
             <>

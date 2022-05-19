@@ -10,11 +10,11 @@ const Products = () => {
   return (
     <>
       <Box my={5}>
-        <Container maxWidth="xl">
+        <Container maxWidth="xxl">
           <Grid container spacing={2}>
             {products.map((product) => {
               return (
-                <Grid item xs={6} xl={3} key={product._id}>
+                <Grid item xs={6} xl={2} key={product._id}>
                   <ProductItem product={product} />
                 </Grid>
               );

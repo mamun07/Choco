@@ -27,12 +27,13 @@ const Login = () => {
   };
 
   return (
-    <Box component="form" onSubmit={loginSubmit} noValidate autoComplete="on">
+    <Box component="form" onSubmit={loginSubmit}>
       <TextField
         label="Email"
         name="email"
         variant="standard"
         type="email"
+        autoComplete="username"
         required
         value={user.email}
         onChange={onChangeInput}
@@ -43,6 +44,7 @@ const Login = () => {
         name="password"
         variant="standard"
         type="password"
+        autoComplete="current-password"
         required
         value={user.password}
         onChange={onChangeInput}

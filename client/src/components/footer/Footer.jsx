@@ -4,7 +4,7 @@ import { Box, Container, Typography } from '@mui/material';
 const Footer = () => {
   return (
     <Box py={5} bgcolor={'#ddd'}>
-      <Container maxWidth="xl">
+      <Container maxWidth="xxl">
         <Typography variant="p">
           &copy; 2022 Noto, all rights reserved.
         </Typography>

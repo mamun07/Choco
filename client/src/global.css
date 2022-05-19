@@ -20,6 +20,13 @@ img {
   max-width: 100%;
   height: auto;
 }
-
+.search-popup-md {
+  display: none;
+}
+@media (max-width: 600px) {
+  .search-popup-md {
+    display: block;
+  }
+}
 /* External css add */
 @import url(../src/components/header/header.css);

@@ -37,13 +37,11 @@ const DetailsProduct = () => {
   if (detailsProduct.length === 0) return null;
 
   return (
-    <Container maxWidth="xl">
+    <Container maxWidth="xxl">
       <Grid container spacing={3} my={3}>
         <Grid item xs={12} md={5}>
           <Box
             className="product-thumb"
-            width={'100%'}
-            height={{ xs: 400, xl: 600 }}
             sx={{
               border: '1px solid',
               borderColor: 'primary.light',
