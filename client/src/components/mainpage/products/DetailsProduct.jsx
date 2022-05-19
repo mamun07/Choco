@@ -13,12 +13,16 @@ import { GlobalState } from '../../../GlobalState';
 
 import ProductItem from '../utils/productItem/ProductItem';
 
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { FreeMode, Navigation, Thumbs } from 'swiper';
+
 const DetailsProduct = () => {
   const params = useParams();
   const state = useContext(GlobalState);
   const [products] = state.ProductsAPI.products;
   const [detailsProduct, setDetailsProduct] = useState([]);
 
+  const [thumbsSwiper, setThumbsSwiper] = useState(null);
   const [count, setCount] = useState(1);
 
   const onChangePlus = () => {
@@ -40,19 +44,84 @@ const DetailsProduct = () => {
     <Container maxWidth="xxl">
       <Grid container spacing={3} my={3}>
         <Grid item xs={12} md={4}>
-          <Box
-            className="product-thumb"
-            sx={{
-              border: '1px solid',
-              borderColor: 'primary.light',
-              borderRadius: 1.5,
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              overflow: 'hidden',
-            }}
-          >
-            <img src={detailsProduct.images.url} alt={detailsProduct.title} />
+          <Box className="product-thumb">
+            <Swiper
+              thumbs={{ Swiper: thumbsSwiper }}
+              spaceBetween={10}
+              modules={[FreeMode, Navigation, Thumbs]}
+              className="mySwiper2"
+            >
+              <SwiperSlide>
+                <img
+                  src={detailsProduct.images.url}
+                  alt={detailsProduct.title}
+                />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img
+                  src={detailsProduct.images.url}
+                  alt={detailsProduct.title}
+                />
+              </SwiperSlide>
+            </Swiper>
+            <Swiper
+              onSwiper={setThumbsSwiper}
+              spaceBetween={10}
+              slidesPerView={5}
+              freeMode={true}
+              navigation={true}
+              modules={[FreeMode, Navigation, Thumbs]}
+              className="mySwiper"
+            >
+              <SwiperSlide>
+                <Box sx={{ cursor: 'pointer' }}>
+                  <img
+                    src={detailsProduct.images.url}
+                    alt={detailsProduct.title}
+                  />
+                </Box>
+              </SwiperSlide>
+              <SwiperSlide>
+                <Box sx={{ cursor: 'pointer' }}>
+                  <img
+                    src={detailsProduct.images.url}
+                    alt={detailsProduct.title}
+                  />
+                </Box>
+              </SwiperSlide>
+              <SwiperSlide>
+                <Box sx={{ cursor: 'pointer' }}>
+                  <img
+                    src={detailsProduct.images.url}
+                    alt={detailsProduct.title}
+                  />
+                </Box>
+              </SwiperSlide>
+              <SwiperSlide>
+                <Box sx={{ cursor: 'pointer' }}>
+                  <img
+                    src={detailsProduct.images.url}
+                    alt={detailsProduct.title}
+                  />
+                </Box>
+              </SwiperSlide>
+              <SwiperSlide>
+                <Box sx={{ cursor: 'pointer' }}>
+                  <img
+                    src={detailsProduct.images.url}
+                    alt={detailsProduct.title}
+                  />
+                </Box>
+              </SwiperSlide>
+              <SwiperSlide>
+                <Box sx={{ cursor: 'pointer' }}>
+                  <img
+                    src={detailsProduct.images.url}
+                    alt={detailsProduct.title}
+                  />
+                </Box>
+              </SwiperSlide>
+            </Swiper>
           </Box>
         </Grid>
         <Grid item xs={12} md={6}>
