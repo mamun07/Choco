@@ -1,10 +1,14 @@
 import React from 'react';
 import { Box, Container, Typography } from '@mui/material';
 import HomeProductSlider from '../utils/home_product_slider/HomeProductSlider';
+import HomeBanner from '../utils/home_banner/HomeBanner';
 
 const Home = () => {
   return (
     <>
+      <Box my={5}>
+        <HomeBanner />
+      </Box>
       <Box my={5}>
         <Container maxWidth="xxl">
           <Box mb={4}>
